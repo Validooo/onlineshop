@@ -1,0 +1,19 @@
+.sstyle {
+background-color: red;
+
+}
+
+
+.topbarbuttons{
+    margin-left: 100px;
+
+}
+
+.searchbutton{
+    position: relative;
+    left: 22ch
+}
+
+.nameofbuttons{
+    font-size: 800%
+}
