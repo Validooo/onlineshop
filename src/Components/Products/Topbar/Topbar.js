@@ -79,7 +79,7 @@ export default function Topbar({ cart }) {
 
   })
 
-  console.log(cart.total_items + "ffffffffff")
+  // console.log(cart.total_items + "ffffffffff")
 
 
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -185,7 +185,7 @@ export default function Topbar({ cart }) {
   return (
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static" className="sstyle" style={{
-        backgroundColor: 'red'
+        backgroundColor: 'gold'
       }}
       >
         <Toolbar>
@@ -206,7 +206,9 @@ export default function Topbar({ cart }) {
             sx={{ mr: 2 }}
             className="topbarbuttons"
           >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+
+            >
               <FcShop />
 
             </Typography>
@@ -219,7 +221,11 @@ export default function Topbar({ cart }) {
             sx={{ mr: 2 }}
             className="topbarbuttons"
           >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+              style={{
+                color: 'blue'
+              }}
+            >
               <b>NEW</b>
             </Typography>
           </IconButton>
@@ -233,7 +239,7 @@ export default function Topbar({ cart }) {
             className="topbarbuttons"
           >
             <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} style={{
-              size: '100 %'
+              color: 'blue'
             }}>
               <b>GIRLS</b>
 
@@ -247,7 +253,12 @@ export default function Topbar({ cart }) {
             sx={{ mr: 2 }}
             className="topbarbuttons"
           >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+              style={{
+                color: 'blue'
+              }}
+
+            >
               <b>BOYS</b>
 
             </Typography>
@@ -260,7 +271,11 @@ export default function Topbar({ cart }) {
             sx={{ mr: 2 }}
             className="topbarbuttons"
           >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+              style={{
+                color: 'blue'
+              }}
+            >
               <b>SALE</b>
 
             </Typography>
@@ -273,7 +288,11 @@ export default function Topbar({ cart }) {
             sx={{ mr: 2 }}
             className="topbarbuttons"
           >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}>
+            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+              style={{
+                color: 'blue'
+              }}
+            >
               <b>CONTACT</b>
 
             </Typography>
@@ -295,6 +314,9 @@ export default function Topbar({ cart }) {
               size="large"
               aria-label="show 17 new notifications"
               color="inherit"
+              style={{
+
+              }}
             >
               <Badge badgeContent={cartQuantity} color="error">
                 <AddShoppingCartIcon />
