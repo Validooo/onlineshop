@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Topbar from './Components/Products/Topbar/Topbar';
+import Topbar from './Components/Topbar/Topbar';
 import Products from './Components/Products/Products';
 import { commerce } from './commerce';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import Cart from './Components/Cart/Cart'
+import Checkout from './Components/CheckoutForm/Checkout/Checkout'
 
 
 import React, { Component } from 'react'
@@ -18,11 +19,12 @@ const App = () => {
   useEffect(() => {
     fetchProducts();
     fetchCart();
-  },
-  )
-
-  //console.log(cart);
-
+  }, [cart])
+  /*
+    if (cart != undefined) {
+      console.log(cart)
+    }
+  */
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
@@ -35,26 +37,46 @@ const App = () => {
 
   const handleAddToCart = async (productId, quantity) => {
     const item = await commerce.cart.add(productId, quantity);
+    console.log("the item is" + item)
     setCart(item)
+    console.log("total is " + cart.total_items)
+
   }
+
+  const handleUpdateCartQty = async (lineItemId, quantity) => {
+    const response = await commerce.cart.update(lineItemId, { quantity });
+
+    setCart(response.cart);
+  };
+
+  const handleRemoveFromCart = async (lineItemId) => {
+    const response = await commerce.cart.remove(lineItemId);
+
+    setCart(response.cart);
+  };
+
+  const handleEmptyCart = async () => {
+    const response = await commerce.cart.empty();
+
+    setCart(response.cart);
+  };
 
 
   // console.log(cart.total_items + "in app")
 
 
-  //  console.log(this.state.pprod.price.formatted)
+
   return (
     <BrowserRouter>
 
       <div >
 
-        <Topbar cart={cart} />
+        <Topbar totalItems={cart.total_items} />
         <Routes>
           <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} />} />
-
+          <Route path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />
+          <Route path="/checkout" element={<Checkout />} />
         </Routes>
-
-
 
       </div>
 

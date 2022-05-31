@@ -10,18 +10,15 @@ import Badge from '@mui/material/Badge';
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import SearchIcon from '@mui/icons-material/Search';
 import AccountCircle from '@mui/icons-material/AccountCircle';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import MoreIcon from '@mui/icons-material/MoreVert';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import { useState, useEffect } from 'react';
-import { createTheme } from '@mui/material/styles';
-import red from '@mui/material/colors/red';
 import './Topbar.css'
 import { FcShop } from "react-icons/fc";
 import { FcSearch } from "react-icons/fc";
+import { Link, useLocation } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -67,20 +64,13 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Topbar({ cart }) {
+export default function Topbar({ totalItems }) {
 
 
-  const [cartQuantity, setCartQuantity] = useState("");
 
-  useEffect(() => {
-    if (cart.total_items != 0) {
-      setCartQuantity(cart.total_items)
-    }
 
-  })
 
-  // console.log(cart.total_items + "ffffffffff")
-
+  const location = useLocation();
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = React.useState(null);
@@ -161,7 +151,7 @@ export default function Topbar({ cart }) {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={cartQuantity} color="error">
+          <Badge badgeContent={totalItems} color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -205,6 +195,7 @@ export default function Topbar({ cart }) {
             aria-label="open drawer"
             sx={{ mr: 2 }}
             className="topbarbuttons"
+            component={Link} to="/"
           >
             <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
 
@@ -317,9 +308,12 @@ export default function Topbar({ cart }) {
               style={{
 
               }}
+              component={Link} to="/cart"
             >
-              <Badge badgeContent={cartQuantity} color="error">
-                <AddShoppingCartIcon />
+              <Badge badgeContent={totalItems} color="error">
+                <AddShoppingCartIcon style={{
+                  color: 'red'
+                }} />
               </Badge>
             </IconButton>
             <IconButton
