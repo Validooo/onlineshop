@@ -1,0 +1,43 @@
+.filterbutton{
+    position: relative;
+    left: 50px;
+}
+
+
+.divfilter{
+    position: relative;
+    width: 70%;
+    height: 70px;
+    background-color: #edf1f4;
+    left: 30ch;
+    box-sizing: border-box
+}
+.h1div{
+    position: relative;
+    left: 5ch;
+}
+
+.sortbylabel{
+    position: relative;
+    top: 12px;
+    left: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    font-size: 1.5em;
+}
+.price{
+    position: relative;
+    left: 28px;
+}
+
+.numberofproducts{
+    color: grey;
+}
+
+.Searchbutton{
+    position: relative;
+    left: 31px;
+    height: 55px;
+    width: 140px;
+    top: 9px;
+}

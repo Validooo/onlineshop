@@ -17,8 +17,18 @@ import MoreIcon from '@mui/icons-material/MoreVert';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './Topbar.css'
 import { FcShop } from "react-icons/fc";
-import { FcSearch } from "react-icons/fc";
+
 import { Link, useLocation } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+
+import { BsX } from "react-icons/bs";
+import Paper from '@mui/material/Paper';
+import { useHistory } from "react-router-dom";
+
+import Divider from '@mui/material/Divider';
+
+import SearchIcon from '@mui/icons-material/Search';
+import { useNavigate } from 'react-router-dom';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -32,7 +42,7 @@ const Search = styled('div')(({ theme }) => ({
   marginLeft: 0,
   width: '100%',
   [theme.breakpoints.up('sm')]: {
-    marginLeft: theme.spacing(3),
+    marginLeft: theme.spacing(0),
     width: 'auto',
   },
 }));
@@ -64,10 +74,32 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-export default function Topbar({ totalItems }) {
+export default function Topbar({ totalItems, changeSearch }) {
+
+  const navigate = useNavigate();
+
+  const [searchText, setSearchText] = useState('');
+  const changeSearchText = event => {
+    setSearchText(event.target.value)
+    console.log(searchText + "ss")
+    changeSearch(searchText)
+  }
+
+  const emptysearch = () => {
+    setSearchText('')
+  }
 
 
+  const GoToSearch = () => {
+    if (searchText !== '') {
+      navigate('/search')
+    }
+  }
 
+
+  useEffect(() => {
+    changeSearch(searchText);
+  }, [searchText])
 
 
   const location = useLocation();
@@ -94,6 +126,8 @@ export default function Topbar({ totalItems }) {
   const handleMobileMenuOpen = (event) => {
     setMobileMoreAnchorEl(event.currentTarget);
   };
+
+
 
 
 
@@ -270,6 +304,8 @@ export default function Topbar({ totalItems }) {
               <b>SALE</b>
 
             </Typography>
+
+
           </IconButton  >
           <IconButton
             size="large"
@@ -288,16 +324,31 @@ export default function Topbar({ totalItems }) {
 
             </Typography>
           </IconButton  >
-          <Search className="searchbutton">
-            <SearchIconWrapper>
-              <FcSearch />
+          <Paper
+            component="form"
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
+            className="searchbutton"
+          >
 
-            </SearchIconWrapper>
-            <StyledInputBase
-              placeholder="Search…"
-              inputProps={{ 'aria-label': 'search' }}
+            <InputBase
+              sx={{ ml: 1, flex: 1 }}
+              placeholder="Search"
+              inputProps={{ 'aria-label': 'search google maps' }}
+              value={searchText}
+              onChange={(e) => setSearchText(e.target.value)}
             />
-          </Search>
+            <IconButton onClick={emptysearch} sx={{ p: '10px' }} aria-label="search">
+              <BsX />
+            </IconButton>
+            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+            <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={GoToSearch} >
+              <SearchIcon />
+            </IconButton>
+          </Paper>
+
+
+
+
           <Box sx={{ flexGrow: 1 }} />
           <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 

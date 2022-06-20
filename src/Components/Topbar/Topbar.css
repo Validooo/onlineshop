@@ -5,13 +5,15 @@ background-color: red;
 
 
 .topbarbuttons{
-    margin-left: 100px;
+    margin-left: 4px;
 
 }
 
 .searchbutton{
     position: relative;
-    left: 22ch
+    left: 22ch;
+    background-color: white;
+  
 }
 
 .nameofbuttons{

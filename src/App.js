@@ -6,15 +6,18 @@ import { commerce } from './commerce';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './Components/Cart/Cart'
 import Checkout from './Components/CheckoutForm/Checkout/Checkout'
+import ProductsSearch from './Components/SearchedProducts/ProductsSearch';
+
 
 
 import React, { Component } from 'react'
 
 const App = () => {
 
-
+  const [search, setSearch] = useState("");
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
+  const [searchedProduct, SetSearchedProduct] = useState([]);
 
   useEffect(() => {
     fetchProducts();
@@ -25,9 +28,37 @@ const App = () => {
       console.log(cart)
     }
   */
+
+  useEffect(() => {
+    getTheResultsofTheSearch();
+    console.log(search)
+    console.log(searchedProduct)
+  }, [search])
+
+
+
+  const getTheResultsofTheSearch = () => {
+    const result = []
+    if (search == '') {
+      SetSearchedProduct([]);
+    }
+    else {
+      products.forEach(product => {
+        if (product.name.toLowerCase().startsWith(search.toLowerCase())) {
+          result.push(product)
+          console.log(product.name)
+        }
+      })
+      SetSearchedProduct(result)
+    }
+  }
+
+  // console.log(products)
+
   const fetchProducts = async () => {
     const { data } = await commerce.products.list();
     setProducts(data);
+
   };
 
 
@@ -61,8 +92,10 @@ const App = () => {
     setCart(response.cart);
   };
 
+  const changeSearch = (word) => {
+    setSearch(word)
+  }
 
-  // console.log(cart.total_items + "in app")
 
 
 
@@ -71,11 +104,12 @@ const App = () => {
 
       <div >
 
-        <Topbar totalItems={cart.total_items} />
+        <Topbar totalItems={cart.total_items} changeSearch={changeSearch} />
         <Routes>
-          <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} />} />
+          <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />
           <Route path="/checkout" element={<Checkout cart={cart} />} />
+          <Route path='/search' element={<ProductsSearch products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} />} />
         </Routes>
 
       </div>
