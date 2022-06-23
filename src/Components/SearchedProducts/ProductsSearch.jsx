@@ -113,6 +113,8 @@ const ProductsSearch = ({ products, handleAddToCart, searchedProduct, search}) =
   useEffect(() => {
     SetSearchProductsFiltered(searchedProduct)
     setProductsCopy(searchedProduct)
+   // console.log(searchedProductFiltered)
+   // console.log( searchedProduct)
   },[searchedProduct])
 
 
@@ -132,7 +134,7 @@ const ProductsSearch = ({ products, handleAddToCart, searchedProduct, search}) =
 
 
 
-
+//console.log(searchedProductFiltered)
 
   const sortTheProducts = () => {
   
@@ -144,21 +146,22 @@ var x = false;
     searchedProductFiltered[i].categories.forEach(element => {
 console.log(element.name)
 
-if(element.name == Sexx){   
+if(element.name === Sexx){   
  x = true;
 }
     })
 
-if(x== false){
+if(x=== false){
   searchedProductFiltered.splice(i,1)
 }
 
   }
 }
 
-if(Sexx == 'All'){
+if(Sexx === 'All'){
 console.log("Sss")
-  SetSearchProductsFiltered(productscopy)
+  SetSearchProductsFiltered(searchedProduct)
+   console.log(searchedProduct)
 }
 
 
@@ -167,7 +170,7 @@ console.log("Sss")
 
 
 
-if(type == 'Cheapest'){
+if(type === 'Cheapest'){
  
  
    for(let i = 0; i<searchedProductFiltered.length ; i++){
@@ -191,7 +194,7 @@ searchedProductFiltered[minIdx] = temp;
     }
 }
 
-if(type == 'Expensive'){
+if(type === 'Expensive'){
  
   for(let i = 0; i<searchedProductFiltered.length ; i++){
 
@@ -224,7 +227,7 @@ searchedProductFiltered[maxIdx] = temp;
 
 
 
-
+console.log(searchedProduct)
 
 //console.log(searchedProductFiltered[0].categories)
 

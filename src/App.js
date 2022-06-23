@@ -7,6 +7,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Cart from './Components/Cart/Cart'
 import Checkout from './Components/CheckoutForm/Checkout/Checkout'
 import ProductsSearch from './Components/SearchedProducts/ProductsSearch';
+import Singleproduct from './Components/Singleproduct/Singleproduct';
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [searchedProduct, SetSearchedProduct] = useState([]);
+  const [showSingleProduct, setSinlgeProduct] = useState([]);
 
   useEffect(() => {
     fetchProducts();
@@ -46,7 +48,7 @@ const App = () => {
       products.forEach(product => {
         if (product.name.toLowerCase().startsWith(search.toLowerCase())) {
           result.push(product)
-          console.log(product.name)
+          //    console.log(product.name)
         }
       })
       SetSearchedProduct(result)
@@ -97,6 +99,11 @@ const App = () => {
   }
 
 
+  const getTheWantedProduct = (product) => {
+    setSinlgeProduct(product)
+  }
+
+
 
 
   return (
@@ -106,10 +113,11 @@ const App = () => {
 
         <Topbar totalItems={cart.total_items} changeSearch={changeSearch} />
         <Routes>
-          <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} />} />
+          <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} getTheWantedProduct={getTheWantedProduct} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />
           <Route path="/checkout" element={<Checkout cart={cart} />} />
           <Route path='/search' element={<ProductsSearch products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} />} />
+          <Route path='/product' element={<Singleproduct products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} showSingleProduct={showSingleProduct} />} />
         </Routes>
 
       </div>

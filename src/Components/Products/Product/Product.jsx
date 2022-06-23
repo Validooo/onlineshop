@@ -4,15 +4,15 @@ import { AddShoppingCart } from '@material-ui/icons';
 import  { useState } from 'react';
 
 import useStyles from './styles';
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 
-
-const Product = ({ product, handleAddToCart }) => {
+const Product = ({ product, handleAddToCart , getTheWantedProduct }) => {
   
-
+  const navigate = useNavigate();
   const [productt, setProductt] = useState({id:"",name:"",price:{formatted:""},image:{url:""},description:""});
   const [price, setPrice] = useState([]);
   const [name, setName] = useState([]);
@@ -34,13 +34,21 @@ if(product.length !=0){
  
 })
 
+
+const GoToSingleProduct = () => {
+  getTheWantedProduct(productt)
+    navigate('/product')
+
+}
+
+
   const classes = useStyles();
   
 
   return (
 
     <Card className={classes.root}>
-      <CardMedia className={classes.media} image={image} title={name} />
+      <CardMedia className={classes.media} image={image} title={name}  onClick={GoToSingleProduct}/>
       <CardContent>
         <div className={classes.cardContent}>
           <Typography gutterBottom variant="h5" component="h2">
