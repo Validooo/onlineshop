@@ -18,6 +18,7 @@ import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './Topbar.css'
 import { FcShop } from "react-icons/fc";
 
+
 import { Link, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 
@@ -29,6 +30,9 @@ import Divider from '@mui/material/Divider';
 
 import SearchIcon from '@mui/icons-material/Search';
 import { useNavigate } from 'react-router-dom';
+import logo from '../../Pictures/Toysshopp.png';
+import { Button } from '@mui/material';
+import { height } from '@mui/system';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -207,12 +211,22 @@ export default function Topbar({ totalItems, changeSearch }) {
   );
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static" className="sstyle" style={{
-        backgroundColor: 'gold'
-      }}
-      >
-        <Toolbar>
+    <div>
+      <div className='picdiv'>
+        <Button component={Link} to="/">
+          <img src={logo} alt="" className='logopicture' />
+        </Button>
+      </div >
+      <div className='appbardiv'>
+        <Box sx={{ flexGrow: 1 }}>
+          <AppBar position="static" className="sstyle" style={{
+            backgroundColor: 'gold'
+
+          }}
+          >
+
+            <Toolbar>
+              {/*
           <IconButton
             size="large"
             edge="start"
@@ -222,180 +236,197 @@ export default function Topbar({ totalItems, changeSearch }) {
           >
             <MenuIcon />
           </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-            component={Link} to="/"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+    */}
+              {/*
+              <Button className='image-button'
+                component={Link} to="/"
+              ><img src={logo} alt="" className='logopicture' /></Button>
+  */ }
 
-            >
-              <FcShop />
+              {/*
 
-            </Typography>
-          </IconButton>
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
-              style={{
-                color: 'blue'
-              }}
-            >
-              <b>NEW</b>
-            </Typography>
-          </IconButton>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+                component={Link} to="/"
+              >
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
 
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} style={{
-              color: 'blue'
-            }}>
-              <b>GIRLS</b>
+                >
 
-            </Typography>
-          </IconButton  >
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
-              style={{
-                color: 'blue'
-              }}
+                  {<FcShop /> }
 
-            >
-              <b>BOYS</b>
+                </Typography>
+              </IconButton>
+*/}
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+              >
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+                  style={{
+                    color: 'blue'
+                  }}
+                >
+                  <b>NEW</b>
+                </Typography>
+              </IconButton>
 
-            </Typography>
-          </IconButton  >
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
-              style={{
-                color: 'blue'
-              }}
-            >
-              <b>SALE</b>
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+              >
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} style={{
+                  color: 'blue'
+                }}>
+                  <b>GIRLS</b>
 
-            </Typography>
+                </Typography>
+              </IconButton  >
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+              >
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+                  style={{
+                    color: 'blue'
+                  }}
 
+                >
+                  <b>BOYS</b>
 
-          </IconButton  >
-          <IconButton
-            size="large"
-            edge="start"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ mr: 2 }}
-            className="topbarbuttons"
-          >
-            <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
-              style={{
-                color: 'blue'
-              }}
-            >
-              <b>CONTACT</b>
+                </Typography>
+              </IconButton  >
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+              >
+                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+                  style={{
+                    color: 'blue'
+                  }}
+                >
+                  <b>SALE</b>
 
-            </Typography>
-          </IconButton  >
-          <Paper
-            component="form"
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
-            className="searchbutton"
-          >
-
-            <InputBase
-              sx={{ ml: 1, flex: 1 }}
-              placeholder="Search"
-              inputProps={{ 'aria-label': 'search google maps' }}
-              value={searchText}
-              onChange={(e) => setSearchText(e.target.value)}
-            />
-            <IconButton onClick={emptysearch} sx={{ p: '10px' }} aria-label="search">
-              <BsX />
-            </IconButton>
-            <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
-            <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={GoToSearch} >
-              <SearchIcon />
-            </IconButton>
-          </Paper>
+                </Typography>
 
 
+              </IconButton  >
+              <IconButton
+                size="large"
+                edge="start"
+                color="inherit"
+                aria-label="open drawer"
+                sx={{ mr: 2 }}
+                className="topbarbuttons"
+              >
+
+                {
+                  <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
+                    style={{
+                      color: 'blue'
+                    }}
+                  >
+                    <b>CONTACT</b>
+
+                  </Typography>
+                }
+              </IconButton  >
+
+              <Paper
+                component="form"
+                sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 300 }}
+                className="searchbutton"
+              >
+
+                <InputBase
+                  sx={{ ml: 1, flex: 1 }}
+                  placeholder="Search"
+                  inputProps={{ 'aria-label': 'search google maps' }}
+                  value={searchText}
+                  onChange={(e) => setSearchText(e.target.value)}
+                />
+                <IconButton onClick={emptysearch} sx={{ p: '10px' }} aria-label="search">
+                  <BsX />
+                </IconButton>
+                <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />
+                <IconButton color="primary" sx={{ p: '10px' }} aria-label="directions" onClick={GoToSearch} >
+                  <SearchIcon />
+                </IconButton>
+              </Paper>
 
 
-          <Box sx={{ flexGrow: 1 }} />
-          <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 
-            <IconButton
-              size="large"
-              aria-label="show 17 new notifications"
-              color="inherit"
-              style={{
 
-              }}
-              component={Link} to="/cart"
-            >
-              <Badge badgeContent={totalItems} color="error">
-                <AddShoppingCartIcon style={{
-                  color: 'red'
-                }} />
-              </Badge>
-            </IconButton>
-            <IconButton
-              size="large"
-              edge="end"
-              aria-label="account of current user"
-              aria-controls={menuId}
-              aria-haspopup="true"
-              onClick={handleProfileMenuOpen}
-              color="inherit"
-            >
-              <AccountCircle />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-            <IconButton
-              size="large"
-              aria-label="show more"
-              aria-controls={mobileMenuId}
-              aria-haspopup="true"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
+              <Box sx={{ flexGrow: 1 }} />
+              <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
 
-            </IconButton>
-          </Box>
-        </Toolbar>
-      </AppBar>
-      {renderMobileMenu}
-      {renderMenu}
-    </Box >
+                <IconButton
+                  size="large"
+                  aria-label="show 17 new notifications"
+                  color="inherit"
+                  style={{
+
+                  }}
+                  component={Link} to="/cart"
+                >
+                  <Badge badgeContent={totalItems} color="error">
+                    <AddShoppingCartIcon style={{
+                      color: 'red'
+                    }} />
+                  </Badge>
+                </IconButton>
+                <IconButton
+                  size="large"
+                  edge="end"
+                  aria-label="account of current user"
+                  aria-controls={menuId}
+                  aria-haspopup="true"
+                  onClick={handleProfileMenuOpen}
+                  color="inherit"
+                >
+                  <AccountCircle />
+                </IconButton>
+              </Box>
+              <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                <IconButton
+                  size="large"
+                  aria-label="show more"
+                  aria-controls={mobileMenuId}
+                  aria-haspopup="true"
+                  onClick={handleMobileMenuOpen}
+                  color="inherit"
+                >
+                  <MoreIcon />
+
+                </IconButton>
+              </Box>
+            </Toolbar>
+          </AppBar>
+          {renderMobileMenu}
+          {renderMenu}
+        </Box >
+      </div>
+    </div>
   );
 }

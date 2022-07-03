@@ -9,6 +9,13 @@ import Checkout from './Components/CheckoutForm/Checkout/Checkout'
 import ProductsSearch from './Components/SearchedProducts/ProductsSearch';
 import Singleproduct from './Components/Singleproduct/Singleproduct';
 
+import logo from './Pictures/Toysshopp.png';
+import whitepic from './Pictures/white-backgorund.png';
+import Spielzeuge from './Pictures/Spielzeuge.jpg'
+import Boywithgirl from './Pictures/boy-with-girl.jpg'
+
+
+
 
 
 import React, { Component } from 'react'
@@ -109,9 +116,33 @@ const App = () => {
   return (
     <BrowserRouter>
 
-      <div >
+      <div className='appdiv' >
 
         <Topbar totalItems={cart.total_items} changeSearch={changeSearch} />
+        {/*
+          <div class="row">
+            <div class="column">
+              <img src={logo} width="100%;" className='logo_picture' />
+            </div>
+
+            <div class="column">
+              <img src={Boywithgirl} width="100%;" className='logo_picture' />
+            </div>
+
+            <div class="column">
+              <img src={Spielzeuge} width="100%;" className='logo_picture' />
+            </div>
+          </div>
+  */}
+        {/*
+        <img src={Boywithgirl} alt="" className='boywithgirlpic' />
+        <img src={whitepic} alt="" className='white-pic' />
+*/}
+        {  /*<img src={logo} alt="" className='logo_picture' />    */}
+        {/*
+        <img src={Spielzeuge} alt="" className='toysbox' />
+*/}
+
         <Routes>
           <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} getTheWantedProduct={getTheWantedProduct} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />

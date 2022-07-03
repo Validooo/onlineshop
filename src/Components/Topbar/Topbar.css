@@ -19,3 +19,26 @@ background-color: red;
 .nameofbuttons{
     font-size: 800%
 }
+.logopicture{
+    position: relative;
+    width: 201px;
+    height: 66px;
+    bottom: 8px;
+  
+}
+
+.image-button{
+    background-color: white;
+    color: white;
+}
+
+
+.picdiv{
+    float: left;
+	width: 14.2%;
+}
+
+.appbardiv{
+    float: left;
+    width :85.8%;
+}

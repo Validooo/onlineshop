@@ -28,6 +28,58 @@
   color: #61dafb;
 }
 
+
+.logo_picture{
+  position: relative;
+
+  left: 0ch;
+ height: 190px;
+
+}
+
+.boywithgirlpic{
+  position: relative;
+
+  left: 0ch;
+ height: 220px;
+
+}
+.toysbox{
+  position: relative;
+  height: 220px;
+  left: 0ch;
+  
+}
+.white-pic{
+  position: relative;
+  height: 220px;
+  width: 200px;
+}
+
+
+
+.appdiv{
+  background-color:white;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

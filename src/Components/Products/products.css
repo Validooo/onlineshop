@@ -1,0 +1,115 @@
+.newword{
+    color: red;
+   font-size: 55px;
+}
+
+.besttoystext{
+    color: DarkSlateGrey;
+}
+
+
+
+
+.divnewcustomer{
+    position: relative;
+    width: 25%;
+    height: 70px;
+    background-color: #edf1f4;
+    left: 0;
+    box-sizing: border-box;
+    float: left;
+}
+
+.labels{
+    position: relative;
+    top: 0px;
+    left: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    font-size: 1.6em;
+}
+
+.labelcategory{
+    position: relative;
+    top: 19px;
+    left: 10px;
+    margin-right: 5px;
+    margin-left: 10px;
+    font-size: 1.6em;
+}
+
+
+.gifticon{
+    position: relative;
+    top:14px;
+    left: 7px;
+}
+
+.sommersalediv{
+    position: relative;
+    width: 73%;
+    float: left;
+    left: 10px;
+    height: 70px;
+ 
+  
+}
+
+
+.each-slidee{
+    position: relative;
+    width: 1000px;
+   
+}
+.each-imagee{
+    position: relative;
+    width: 700px;
+    height:600px;
+    left: 10ch;
+}
+.slidess{
+    position: relative;
+    top:10px;
+   left:25ch;
+    width: 1000px;
+}
+
+.sale-image{
+    position: relative;
+    width:500px;
+    left: 40px;
+}
+
+.sommersale{
+    position: relative;
+    width:460px;
+    
+}
+
+.best-toys{
+    position: relative;
+    width: 480px;
+}
+
+.divbesideslides{
+    position: relative;
+    width: 15%;
+    float: left;
+}
+
+.sildesdiv{
+    position: relative;
+    width: 85%;
+    float: left;
+}
+
+.imagelefttotheslides{
+    position: relative;
+    right: 43ch;
+    height: 600px;
+
+}
+
+.topdiv{
+    width: 100%;
+}
