@@ -1,18 +1,27 @@
 .sstyle {
-background-color: red;
+position: relative;
 
 }
 
 
 .topbarbuttons{
-    margin-left: 4px;
+    position: relative;
+
+    bottom: 10px;
+
+}
+.topbarbuttonss{
+    position: relative;
+
+   bottom: 2px;
 
 }
 
 .searchbutton{
     position: relative;
-    left: 22ch;
-    background-color: white;
+bottom: 8px;
+    
+    
   
 }
 
@@ -39,6 +48,30 @@ background-color: red;
 }
 
 .appbardiv{
-    float: left;
-    width :85.8%;
+    position: relative;
+    display: flex;
+    width :100%;
+}
+
+
+.searchappbar{
+    position: relative;
+
+}
+.menuicon{
+    display: none;
+}
+
+@media (max-width :950px){
+    .topbarbuttons{
+        display: none !important;
+    }
+    .menuicon{
+        display: flex;
+    }
+    .searchbutton{
+        display: none !important;
+    }
+
+
 }

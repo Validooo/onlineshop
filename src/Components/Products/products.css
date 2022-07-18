@@ -10,15 +10,7 @@
 
 
 
-.divnewcustomer{
-    position: relative;
-    width: 25%;
-    height: 70px;
-    background-color: #edf1f4;
-    left: 0;
-    box-sizing: border-box;
-    float: left;
-}
+
 
 .labels{
     position: relative;
@@ -37,6 +29,38 @@
     margin-left: 10px;
     font-size: 1.6em;
 }
+.firstdiv{
+    display: flex;
+    height: 202px;
+}
+
+.divlogo{
+ flex:2
+}
+.everythingyouneeddiv{
+   flex:2
+}
+
+.seconddiv{
+    display: flex;
+    align-content: center;
+}
+.divnewcustomer{
+    flex: 1;
+    background-color: #edf1f4;
+    box-sizing: border-box;
+}
+
+.sommersalediv{
+    flex: 1;
+    height: 70px;
+}
+
+.sommersale{
+  
+        width:460px;
+}      
+   
 
 
 .gifticon{
@@ -45,15 +69,7 @@
     left: 7px;
 }
 
-.sommersalediv{
-    position: relative;
-    width: 73%;
-    float: left;
-    left: 10px;
-    height: 70px;
- 
-  
-}
+
 
 
 .each-slidee{
@@ -65,13 +81,17 @@
     position: relative;
     width: 700px;
     height:600px;
-    left: 10ch;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 .slidess{
     position: relative;
-    top:10px;
-   left:25ch;
-    width: 1000px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+    
 }
 
 .sale-image{
@@ -80,26 +100,18 @@
     left: 40px;
 }
 
-.sommersale{
-    position: relative;
-    width:460px;
-    
-}
+
 
 .best-toys{
     position: relative;
     width: 480px;
 }
 
-.divbesideslides{
-    position: relative;
-    width: 15%;
-    float: left;
-}
+
 
 .sildesdiv{
     position: relative;
-    width: 85%;
+    width: 100%;
     float: left;
 }
 
@@ -112,4 +124,25 @@
 
 .topdiv{
     width: 100%;
+    height: 500px;
+    
+}
+
+.logobutton{
+    position: relative;
+   bottom:40px;
+}
+
+.logopic{
+    position: relative;
+    height: 190px;
+}
+
+
+
+
+.everythingpic{
+    position: relative;
+    top: 40px;
+    height: 60px;
 }

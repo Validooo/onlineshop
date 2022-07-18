@@ -13,6 +13,7 @@ import Paper from '@mui/material/Paper';
 import {CgGift} from "react-icons/cg";
 import sale from '../../Pictures/sale.png';
 import watergun from '../../Pictures/watergun.jpg';
+import { Link, useLocation } from 'react-router-dom';
 
 import everythingforyourchild from '../../Pictures/everythingforyourchild.png';
 import sommersale from '../../Pictures/sommersale.png';
@@ -20,7 +21,9 @@ import besttoys from '../../Pictures/besttoys.png'
 import need from '../../Pictures/need.png';
 import lego from '../../Pictures/lego.jpg';
 import rutsch from '../../Pictures/rutsch.jpg'
-
+import logo from '../../Pictures/logo.png'
+import logoo from '../../Pictures/logosss.png'
+import ppp from '../../Pictures/ppp.png'
 
 
 const images =[watergun, lego,rutsch ]
@@ -33,14 +36,23 @@ const Products = ({ products, handleAddToCart, searchedProduct, search , getTheW
   return (
     <main className={classes.content}>
       <div className={classes.toolbar} />
-   { /*
-<h1><text className='besttoystext'><center>Best toys for best prices</center></text></h1>
-  */}
+  
+<div className='firstdiv' >
+<div className='divlogo'>
+  <Button component={Link} to="/"
+      className='logobutton'        >
+<img src={logoo} alt=""  className='logopic'/>
+</Button>
+ 
+</div>  
+<div className='everythingyouneeddiv'>
+<img src={ppp} alt=""  className='everythingpic' />
+</div>
+</div>
 
-<div>
+<div className='seconddiv'>
 
   <div className='divnewcustomer'>
- 
   {/*
  <Paper
                 component="form"
@@ -51,7 +63,6 @@ const Products = ({ products, handleAddToCart, searchedProduct, search , getTheW
         <CgGift size="3em" style={{color: 'red'}} className="gifticon" />   
   <label className='labels'>10$ for new customers</label>
 {/*  <Divider sx={{ height: 28, m: 0.5 }} orientation="vertical" />  */}
-
 </div>
 {
 <div className='sommersalediv'>
@@ -65,7 +76,7 @@ const Products = ({ products, handleAddToCart, searchedProduct, search , getTheW
 
 </div>  
 <div className="topdiv">
-<div className="divbesideslides"> {<img  className="imagelefttotheslides" src={need} />}</div>
+
 
 <div className='sildesdiv'>
 <Slide className ="slidess">

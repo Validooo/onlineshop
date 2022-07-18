@@ -8,6 +8,7 @@ import Cart from './Components/Cart/Cart'
 import Checkout from './Components/CheckoutForm/Checkout/Checkout'
 import ProductsSearch from './Components/SearchedProducts/ProductsSearch';
 import Singleproduct from './Components/Singleproduct/Singleproduct';
+import Logo from './Components/logo/Logo';
 
 import logo from './Pictures/Toysshopp.png';
 import whitepic from './Pictures/white-backgorund.png';
@@ -117,7 +118,7 @@ const App = () => {
     <BrowserRouter>
 
       <div className='appdiv' >
-
+        <Logo />
         <Topbar totalItems={cart.total_items} changeSearch={changeSearch} />
         {/*
           <div class="row">
