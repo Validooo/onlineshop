@@ -15,6 +15,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
 import Grow from '@mui/material/Grow';
+import logoo from '../../Pictures/kelki.png'
 
 import Popper from '@mui/material/Popper';
 
@@ -234,7 +235,7 @@ export default function Topbar({ totalItems, changeSearch }) {
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" className="sstyle" style={{
           backgroundColor: 'gold',
-          height: 49
+
         }}
         >
 
@@ -260,31 +261,31 @@ export default function Topbar({ totalItems, changeSearch }) {
   */ }
 
             {
-
-              <IconButton
-                size="large"
-                edge="start"
-                color="inherit"
-                aria-label="open drawer"
-                sx={{ mr: 2 }}
-                className="topbarbuttonss"
-                component={Link} to="/"
-              >
-                <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
-
+              <div >
+                <IconButton
+                  size="large"
+                  edge="start"
+                  color="inherit"
+                  aria-label="open drawer"
+                  sx={{ mr: 2 }}
+                  className="topbarbuttonss"
+                  component={Link} to="/"
                 >
+                  <Typography variant="h5" component="div" sx={{ flexGrow: 1 }}
 
-                  {<FcShop size="2em" />}
+                  >
 
-                </Typography>
-              </IconButton>
+                    {<FcShop size="2em" />}
 
+                  </Typography>
+                </IconButton>
+              </div>
 
 
             }
-
-
-
+            <div className='logoooodiv'>
+              <img src={logoo} alt="" className='logopicc' />
+            </div>
 
 
 

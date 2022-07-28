@@ -1,6 +1,6 @@
 .sstyle {
 position: relative;
-
+height: 49px;
 }
 
 
@@ -62,6 +62,11 @@ bottom: 8px;
     display: none;
 }
 
+
+.logopicc{
+    display: none;
+}
+
 @media (max-width :950px){
     .topbarbuttons{
         display: none !important;
@@ -72,6 +77,24 @@ bottom: 8px;
     .searchbutton{
         display: none !important;
     }
+
+
+    .sstyle{
+        height: 70px;
+    }
+
+    .logopicc{
+        display: block;
+    margin: auto;
+     
+        width: 50%;
+       
+        
+       
+        
+    }
+
+ 
 
 
 }

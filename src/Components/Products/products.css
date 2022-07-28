@@ -35,10 +35,10 @@
 }
 
 .divlogo{
- flex:2
+ flex:1
 }
 .everythingyouneeddiv{
-   flex:2
+   flex:3
 }
 
 .seconddiv{
@@ -49,10 +49,11 @@
     flex: 1;
     background-color: #edf1f4;
     box-sizing: border-box;
+
 }
 
 .sommersalediv{
-    flex: 1;
+    flex: 2;
     height: 70px;
 }
 
@@ -144,5 +145,28 @@
 .everythingpic{
     position: relative;
     top: 40px;
-    height: 60px;
+    height: 80px;
+}
+
+
+@media (max-width :950px){
+    .firstdiv{
+        display: none;
+    }
+
+    .seconddiv{
+        display: none;
+    }
+
+    
+
+
+
+.topdiv{
+
+    display: none;
+
+}
+
+
 }

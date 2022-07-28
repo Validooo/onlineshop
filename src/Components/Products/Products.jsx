@@ -79,6 +79,7 @@ const Products = ({ products, handleAddToCart, searchedProduct, search , getTheW
 
 
 <div className='sildesdiv'>
+
 <Slide className ="slidess">
          {images.map(slideImage=> (
             <div className="each-slidee" key={slideImage.id}>
@@ -90,7 +91,7 @@ const Products = ({ products, handleAddToCart, searchedProduct, search , getTheW
             </div>
           ))} 
         </Slide>
-
+       
         </div>
         </div> 
         <div>
