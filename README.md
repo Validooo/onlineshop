@@ -1,6 +1,6 @@
-<h3>In develpoment 
-For now works just for Computers<h3>
-<a href="https://validooo.github.io/live-online-shop/"><h1>Link to the Website</h1></a>
+<h1>In develpoment 
+For now works just for Computers<h1>
+<a href="https://validooo.github.io/live-online-shop/"><h2>Link to the Website</h2></a>
 
 <img src="Screenshots/firstscreen.png" >
 
