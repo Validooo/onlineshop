@@ -1,5 +1,5 @@
 
-<a href="https://validooo.github.io/live-online-shop/">Link</a>
+<a href="https://validooo.github.io/live-online-shop/"><h1>Link to the Website</h1></a>
 
 <img src="Screenshots/firstscreen.png" >
 
