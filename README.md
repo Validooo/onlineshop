@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-<h1>[link](https://validooo.github.io/live-online-shop/) </h1>
+[link](https://validooo.github.io/live-online-shop/) 
 
 ## Available Scripts
 
