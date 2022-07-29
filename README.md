@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1>[link](https://validooo.github.io/live-online-shop/) </h1>
 
 ## Available Scripts
 
