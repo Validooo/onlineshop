@@ -1,6 +1,5 @@
 
-
-[Link]([https://www.google.com/](https://validooo.github.io/live-online-shop/))
+<a href="https://validooo.github.io/live-online-shop/">Link</a>
 
 <img src="Screenshots/firstscreen.png" >
 
