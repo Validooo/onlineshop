@@ -1,4 +1,4 @@
-<h1>In develpoment. For now works just for Computers<h1>
+<h1>In develpoment. Mobile-Version is under construction<h1>
   
   <a href= "https://validooo.github.io/live-online-shop/"> Link to Website </a>
 
