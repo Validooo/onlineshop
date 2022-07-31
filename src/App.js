@@ -1,29 +1,21 @@
+import logo from './logo.svg';
+import React, { Component } from 'react';
 import { useState, useEffect } from 'react';
 import './App.css';
 import Topbar from './Components/Topbar/Topbar';
-import Products from './Components/Products/Products';
-import { commerce } from './commerce';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import Cart from './Components/Cart/Cart'
-import Checkout from './Components/CheckoutForm/Checkout/Checkout'
+import { commerce } from './commerce';
+import Products from './Components/Products/Products';
+import Checkout from './Components/CheckoutForm/Checkout/Checkout';
 import ProductsSearch from './Components/SearchedProducts/ProductsSearch';
 import Singleproduct from './Components/Singleproduct/Singleproduct';
-import Logo from './Components/logo/Logo';
-
-import logo from './Pictures/Toysshopp.png';
-import whitepic from './Pictures/white-backgorund.png';
-import Spielzeuge from './Pictures/Spielzeuge.jpg'
-import Boywithgirl from './Pictures/boy-with-girl.jpg'
+import Cart from './Components/Cart/Cart';
 
 
-
-
-
-import React, { Component } from 'react'
-
-const App = () => {
-
+function App() {
   const [search, setSearch] = useState("");
+  const [itemsnumber, Setitemsnumber] = useState(1)
+
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
   const [searchedProduct, SetSearchedProduct] = useState([]);
@@ -113,37 +105,12 @@ const App = () => {
 
 
 
-
   return (
     <BrowserRouter>
+      <div className="App">
 
-      <div className='appdiv' >
-        <Logo />
+
         <Topbar totalItems={cart.total_items} changeSearch={changeSearch} />
-        {/*
-          <div class="row">
-            <div class="column">
-              <img src={logo} width="100%;" className='logo_picture' />
-            </div>
-
-            <div class="column">
-              <img src={Boywithgirl} width="100%;" className='logo_picture' />
-            </div>
-
-            <div class="column">
-              <img src={Spielzeuge} width="100%;" className='logo_picture' />
-            </div>
-          </div>
-  */}
-        {/*
-        <img src={Boywithgirl} alt="" className='boywithgirlpic' />
-        <img src={whitepic} alt="" className='white-pic' />
-*/}
-        {  /*<img src={logo} alt="" className='logo_picture' />    */}
-        {/*
-        <img src={Spielzeuge} alt="" className='toysbox' />
-*/}
-
         <Routes>
           <Route path="/" element={<Products products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} getTheWantedProduct={getTheWantedProduct} />} />
           <Route path="/cart" element={<Cart cart={cart} onUpdateCartQty={handleUpdateCartQty} onRemoveFromCart={handleRemoveFromCart} onEmptyCart={handleEmptyCart} />} />
@@ -151,12 +118,9 @@ const App = () => {
           <Route path='/search' element={<ProductsSearch products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} />} />
           <Route path='/product' element={<Singleproduct products={products} handleAddToCart={handleAddToCart} searchedProduct={searchedProduct} search={search} showSingleProduct={showSingleProduct} />} />
         </Routes>
-
       </div>
-
     </BrowserRouter>
-  )
-
+  );
 }
 
 export default App;

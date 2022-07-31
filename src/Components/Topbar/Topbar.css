@@ -1,100 +1,100 @@
 .sstyle {
-position: relative;
-height: 49px;
-}
-
-
-.topbarbuttons{
     position: relative;
-
-    bottom: 10px;
-
-}
-.topbarbuttonss{
-    position: relative;
-
-   bottom: 2px;
-
-}
-
-.searchbutton{
-    position: relative;
-bottom: 8px;
+    height: 49px;
+    }
     
     
-  
-}
-
-.nameofbuttons{
-    font-size: 800%
-}
-.logopicture{
-    position: relative;
-    width: 201px;
-    height: 66px;
-    bottom: 8px;
-  
-}
-
-.image-button{
-    background-color: white;
-    color: white;
-}
-
-
-.picdiv{
-    float: left;
-	width: 14.2%;
-}
-
-.appbardiv{
-    position: relative;
-    display: flex;
-    width :100%;
-}
-
-
-.searchappbar{
-    position: relative;
-
-}
-.menuicon{
-    display: none;
-}
-
-
-.logopicc{
-    display: none;
-}
-
-@media (max-width :950px){
     .topbarbuttons{
-        display: none !important;
+        position: relative;
+    
+        bottom: 10px;
+    
+    }
+    .topbarbuttonss{
+        position: relative;
+    
+       bottom: 2px;
+    
+    }
+    
+    .searchbutton{
+        position: relative;
+    bottom: 8px;
+        
+        
+      
+    }
+    
+    .nameofbuttons{
+        font-size: 800%
+    }
+    .logopicture{
+        position: relative;
+        width: 201px;
+        height: 66px;
+        bottom: 8px;
+      
+    }
+    
+    .image-button{
+        background-color: white;
+        color: white;
+    }
+    
+    
+    .picdiv{
+        float: left;
+        width: 14.2%;
+    }
+    
+    .appbardiv{
+        position: relative;
+        display: flex;
+        width :100%;
+    }
+    
+    
+    .searchappbar{
+        position: relative;
+    
     }
     .menuicon{
-        display: flex;
+        display: none;
     }
-    .searchbutton{
-        display: none !important;
-    }
-
-
-    .sstyle{
-        height: 70px;
-    }
-
+    
+    
     .logopicc{
-        display: block;
-    margin: auto;
-     
-        width: 50%;
-       
-        
-       
-        
+        display: none;
     }
-
- 
-
-
-}
+    
+    @media (max-width :950px){
+        .topbarbuttons{
+            display: none !important;
+        }
+        .menuicon{
+            display: flex;
+        }
+        .searchbutton{
+            display: none !important;
+        }
+    
+    
+        .sstyle{
+            height: 70px;
+        }
+    
+        .logopicc{
+            display: block;
+        margin: auto;
+         width: 50%;
+          
+           
+            
+           
+            
+        }
+    
+     
+    
+    
+    }

@@ -1,4 +1,5 @@
 .newword{
+    
     color: red;
    font-size: 55px;
 }
@@ -149,6 +150,12 @@
 }
 
 
+.underTopbarMobileversion{
+    display: none;
+
+    
+}
+
 @media (max-width :950px){
     .firstdiv{
         display: none;
@@ -160,7 +167,16 @@
 
     
 
-
+.underTopbarMobileversion{
+    display: flex;
+}
+.searchmobileversion{
+    background-color: blue;
+    flex: 2;
+}
+.shoppingIconMobileversion{
+flex:1;
+}
 
 .topdiv{
 

@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
-import AppBar from '@mui/material/AppBar';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
-import IconButton from '@mui/material/IconButton';
-import Typography from '@mui/material/Typography';
-import InputBase from '@mui/material/InputBase';
-import Badge from '@mui/material/Badge';
-import MenuItem from '@mui/material/MenuItem';
-import Menu from '@mui/material/Menu';
-import MenuIcon from '@mui/icons-material/Menu';
-import AccountCircle from '@mui/icons-material/AccountCircle';
+import { AppBar } from '@mui/material';
+import { Box } from '@mui/material';
+import { Toolbar } from '@mui/material';
+import { IconButton } from '@mui/material';
+import { Typography } from '@mui/material';
+import { InputBase } from '@mui/material';
+import { Badge } from '@mui/material';
+import { MenuItem } from '@mui/material';
+import { Menu } from '@mui/material';
+import { MenuIcon } from '@mui/icons-material';
+import { AccountCircle } from '@mui/icons-material';
 import MailIcon from '@mui/icons-material/Mail';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -19,7 +19,7 @@ import logoo from '../../Pictures/kelki.png'
 
 import Popper from '@mui/material/Popper';
 
-import MenuList from '@mui/material/MenuList';
+import { MenuList } from '@mui/material';
 
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import './Topbar.css'
@@ -325,7 +325,7 @@ export default function Topbar({ totalItems, changeSearch }) {
               <Typography variant="h5" component="div" sx={{ flexGrow: 1 }} style={{
                 color: 'blue'
               }}>
-                <b>GIRLS</b>
+                <b>GIRLZ</b>
 
               </Typography>
             </IconButton  >
@@ -416,6 +416,7 @@ export default function Topbar({ totalItems, changeSearch }) {
 
             <Box sx={{ flexGrow: 1 }} />
             <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
+
 
               <IconButton
                 size="large"
