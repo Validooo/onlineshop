@@ -1,6 +1,9 @@
-# Getting Started with Create React App
+<h1>In develpoment. Mobile-Version is under construction<h1>
+  
+  <a href= "https://validooo.github.io/live-online-shop/"> Link to Website </a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+<img src="Screenshots/firstscreen.png" >
 
 ## Available Scripts
 
